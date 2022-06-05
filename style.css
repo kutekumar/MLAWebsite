@@ -96,6 +96,7 @@ body {
   margin-bottom: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.862);
   z-index: -2;
+  transition: all 0.3s ease;
 }
 
 .hero::before,
@@ -140,13 +141,15 @@ body {
 .content h3 {
   font-family: 'MLAFont';
   max-width: 1200px;
+  height: 150px;
+  text-align: center;
   margin: 0 auto;
   font-size: 200%;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.516);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
-  padding: 20px;
+  padding: 50px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -158,18 +161,19 @@ body {
   line-height: 40px;
   letter-spacing: 1.2px;
   align-content: space-around;
+  filter: drop-shadow(2px 2px 5px gray);
 }
 
 .about {
-  background-image: url('imgs/mla02.jpg');
-}
-
-.services {
   background-image: url('imgs/mla03.jpg');
 }
 
+.services {
+  background-image: url('imgs/mla14.jpg');
+}
+
 .contact {
-  background-image: url('imgs/mla04.jpg');
+  background-image: url('imgs/mla06.jpg');
 }
 
 .box {

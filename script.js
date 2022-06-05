@@ -14,6 +14,15 @@ const aboutNav = document.querySelector('.about')
 const servicesNav = document.querySelector('.services')
 const contactNav = document.querySelector('.contact')
 
+const totalImages = 9
+
+let images = []
+const slideTime = 3000
+
+for (var i = 0; i < totalImages; i++) {
+  images.push(`imgs/mla${i < 10 ? '0' + (i + 1) : i + 1}.jpg`)
+}
+
 document.querySelectorAll('a').forEach((a) => {
   a.addEventListener('click', (e) => {
     e.preventDefault()
@@ -22,8 +31,6 @@ document.querySelectorAll('a').forEach((a) => {
     })
   })
 })
-
-const totalImages = 9
 
 const bgStr = `url(imgs/mla${
   generateRandomNum() < 10 ? '0' + generateRandomNum() : generateRandomNum()
@@ -58,4 +65,16 @@ function checkBoxes() {
       box.classList.remove('show')
     }
   })
+}
+window.onload = changePicture
+
+function changePicture() {
+  hero.style.backgroundImage = 'url(' + images[i] + ')'
+
+  if (i < images.length - 1) {
+    i++
+  } else {
+    i = 0
+  }
+  setTimeout(changePicture, slideTime)
 }
